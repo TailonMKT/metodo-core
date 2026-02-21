@@ -1,5 +1,3 @@
-import type { NextConfig } from "next";
-// @ts-expect-error
 import withPWAInit from "next-pwa";
 
 const withPWA = withPWAInit({
@@ -9,9 +7,8 @@ const withPWA = withPWAInit({
   skipWaiting: true,
 });
 
-const nextConfig: NextConfig = {
+const nextConfig = {
   output: "standalone",
-  turbopack: {},
 };
 
 export default withPWA(nextConfig);
